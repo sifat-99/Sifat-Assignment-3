@@ -27,6 +27,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              sif_color: "#F85559",
             },
           },
         },
@@ -45,10 +46,37 @@
       .font-lato {
         font-family: "Lato", sans-serif;
       }
+
+      /* Style for the text overlay */
+      .text-overlay {
+        background: linear-gradient(
+          180deg,
+          #121212 20%,
+          rgba(18, 18, 18, 0) 70%
+        );
+        padding: 20px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      /* style for overlay text for small screen */
+      .text-over-small {
+        background: linear-gradient(
+          180deg,
+          #121212cc 20%,
+          rgba(18, 18, 18, 0) 100%
+        );
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        padding-top: 5%;
+      }
     </style>
   </head>
-  <body class="font-lato">
-    <header class="px-5 py-[50px] xl:px-40 2xl:px-56">
+  <body class="font-lato -mr-16 px-5 xl:px-40 2xl:px-56">
+    <header class="py-[50px]">
       <!-- This one is used for big screen and medium screen navbar -->
       <nav
         class="invisible md:visible bg-[#F85559] py-7 px-6 rounded-full lg:bg-[#F85559]"
@@ -79,7 +107,7 @@
       </nav>
       <!-- Used for responsive mobile nav bar -->
       <nav
-        class="flex justify-between items-center visible -my-64 md:invisible sm:-my-36"
+        class="flex justify-between items-center visible -my-64 sm:-my-36 md:invisible"
       >
         <div class="flex items-center">
           <img src="./images/logo.png" alt="Logo" class="w-14 h-16" />
@@ -105,20 +133,139 @@
             </label>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow rounded-box w-auto"
+              class="menu menu-sm dropdown-content bg-white mt-3 z-[1] p-3 shadow rounded-box w-auto"
             >
               <a href="#" class="text-lg font-medium md:text-white">Home</a>
               <a href="#" class="text-lg font-medium md:text-white">About Us</a>
               <a href="#" class="text-lg font-medium md:text-white">Shop</a>
-              <a href="#" class="text-lg font-medium md:text-white"
-                >All Fruits</a
-              >
+              <a href="#" class="text-lg font-medium md:text-white">All Fruits</a>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="sm:pt-28">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="/images/banner1.png" class="w-full" />
+            <div
+              class="absolute text-2xl flex flex-col items-center gap-3 text-over-small md:text-overlay md:text-7xl text-white font-extrabold"
+            >
+              <h2 class="lg:pt-20">Exotic tastes at your <br />doorstep</h2>
+              <p class="text-sm md:text-xl font-medium">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="bg-sif_color py-2 px-4 text-white sm:px-8 md:py-5 rounded-lg text-xl"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="/images/banner2.png" class="w-full" />
+            <div
+              class="absolute text-2xl flex flex-col items-center gap-3 text-over-small md:text-overlay md:text-7xl text-white font-extrabold"
+            >
+              <h2>Exotic tastes at your <br />doorstep</h2>
+              <p class="text-sm md:text-xl font-medium">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="bg-sif_color py-2 px-4 text-white sm:px-8 md:py-5 rounded-lg text-xl"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="/images/banner3.png" class="w-full" />
+            <div
+              class="absolute text-2xl flex flex-col items-center gap-3 text-over-small md:text-overlay md:text-7xl text-white font-extrabold"
+            >
+              <h2>Exotic tastes at your <br />doorstep</h2>
+              <p class="text-sm md:text-xl font-medium">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="bg-sif_color py-2 px-4 text-white sm:px-8 md:py-5 rounded-lg text-xl"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="/images/banner4.png" class="w-full" />
+            <div
+              class="absolute text-2xl flex flex-col items-center gap-3 text-over-small md:text-overlay md:text-7xl text-white font-extrabold"
+            >
+              <h2>Exotic tastes at your <br />doorstep</h2>
+              <p class="text-sm md:text-xl font-medium">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="bg-sif_color py-2 px-4 text-white sm:px-8 md:py-5 rounded-lg text-xl"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- overlap fruit section -->
+      <section class="relative">
+        <div
+          class="invisible flex w-4/5 rounded-xl p-4 shadow-lg shadow-black-500/50 justify-between bg-white absolute -top-20 left-40  2xl:visible"
+        >
+          <div class="flex flex-col items-center">
+            <img src="./images/fruit1.png" alt="" />
+            <p>Grape</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="./images/fruit2.png" alt="" />
+            <p>Orange</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="./images/fruit3.png" alt="" />
+            <p>Mango</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="./images/fruit4.png" alt="" />
+            <p>Strawberry</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="./images/fruit5.png" alt="" />
+            <p>Pomegranate</p>
+          </div>
+        </div>
+      </section>
+    
+    </main>
     <footer></footer>
   </body>
 </html>
