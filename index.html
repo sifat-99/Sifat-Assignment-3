@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Burst</title>
+    <!-- for favicon -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <!-- the CDN Installation of DaisyUI and tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- for using font awesome icon -->
+    <script
+      src="https://kit.fontawesome.com/12afd1a468.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- using White theme -->
+    <html data-theme="light"></html>
+    <!-- Tailwind for custom color and gradient -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- custom google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- for custom font using tags -->
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-lato">
+    <header class="px-5 py-[50px] xl:px-40 2xl:px-56">
+      <!-- This one is used for big screen and medium screen navbar -->
+      <nav
+        class="invisible md:visible bg-[#F85559] py-7 px-6 rounded-full lg:bg-[#F85559]"
+      >
+        <div class="container mx-auto flex items-center justify-between px-5">
+          <!-- Menu Items -->
+          <div class="space-x-4">
+            <a href="#" class="text-lg font-medium md:text-white">Home</a>
+            <a href="#" class="text-lg font-medium md:text-white">About Us</a>
+            <a href="#" class="text-lg font-medium md:text-white">Shop</a>
+            <a href="#" class="text-lg font-medium md:text-white">All Fruits</a>
+          </div>
+          <!-- Logo with Title -->
+          <div class="flex items-center gap-4">
+            <img src="./images/logo.png" alt="Logo" class="w-14 h-16" />
+            <span class="text-white text-3xl font-bold">Fruit Burst</span>
+          </div>
+          <!-- Search Input -->
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search here"
+              class="pl-4 pr-4 py-2 w-72 rounded-3xl focus:outline-none focus:ring focus:border-blue-300"
+            />
+            <i class="absolute right-3 top-3 fas fa-search text-[#121212]"></i>
+          </div>
+        </div>
+      </nav>
+      <!-- Used for responsive mobile nav bar -->
+      <nav
+        class="flex justify-between items-center visible -my-64 md:invisible sm:-my-36"
+      >
+        <div class="flex items-center">
+          <img src="./images/logo.png" alt="Logo" class="w-14 h-16" />
+          <a class="btn btn-ghost normal-case text-xl font-bold">Fruit Burst</a>
+        </div>
+        <div class="">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow rounded-box w-auto"
+            >
+              <a href="#" class="text-lg font-medium md:text-white">Home</a>
+              <a href="#" class="text-lg font-medium md:text-white">About Us</a>
+              <a href="#" class="text-lg font-medium md:text-white">Shop</a>
+              <a href="#" class="text-lg font-medium md:text-white"
+                >All Fruits</a
+              >
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>
