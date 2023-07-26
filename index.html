@@ -76,79 +76,84 @@
     </style>
   </head>
   <body class="font-lato w-auto -mr-16 mx-7 lg:mx-28 xl:mx-40 2xl:mx-60">
-    <header class="py-[50px]">
+    <header class="my-12">
       <!-- This one is used for big screen and medium screen navbar -->
       <nav
-        class="invisible md:visible bg-[#F85559] py-7 px-6 rounded-full lg:bg-[#F85559]"
+        class="bg-sif_color p-6 flex rounded-full items-center justify-between"
       >
-        <div class="container mx-auto flex items-center justify-between px-5">
-          <!-- Menu Items -->
-          <div class="space-x-4">
-            <a href="#" class="text-lg font-medium md:text-white">Home</a>
-            <a href="#" class="text-lg font-medium md:text-white">About Us</a>
-            <a href="#" class="text-lg font-medium md:text-white">Shop</a>
-            <a href="#" class="text-lg font-medium md:text-white">All Fruits</a>
+        <!-- Menu -->
+        <div class="flex items-center w-full justify-between">
+          <div class="order-2 sm:order-none sm:hidden text-black mr-4">
+            <div class="dropdown relative">
+              <label tabindex="0" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+              </label>
+              <ul tabindex="0" class="menu absolute top-8 -left-8 menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-max">
+                <li><a>Home</a></li>
+                <li><a>About us</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All-Fruits</a></li>
+              </ul>
+            </div>
           </div>
-          <!-- Logo with Title -->
-          <div class="flex items-center gap-4">
-            <img src="./images/logo.png" alt="Logo" class="w-14 h-16" />
-            <span class="text-white text-3xl font-bold">Fruit Burst</span>
-          </div>
-          <!-- Search Input -->
-          <div class="relative">
-            <input
-              type="text"
-              placeholder="Search here"
-              class="pl-4 pr-4 py-2 w-48 xl:w-72 rounded-3xl focus:outline-none focus:ring focus:border-blue-300"
-            />
-            <i class="absolute right-3 top-3 fas fa-search text-[#121212]"></i>
-          </div>
-        </div>
-      </nav>
-      <!-- Used for responsive mobile nav bar -->
-      <nav
-        class="flex sticky top-4 justify-between items-center visible -my-52 sm:-my-36 md:invisible"
-      >
-        <div class="flex items-center">
-          <img src="./images/logo.png" alt="Logo" class="w-14 h-16" />
-          <a class="btn btn-ghost normal-case text-xl font-bold">Fruit Burst</a>
-        </div>
-        <div class="">
-          <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost btn-circle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          <div class="hidden w-full md:flex justify-center lg:justify-start">
+            <div class="sm:flex space-x-4 ml-4">
+              <a href="#" class="text-white md:text-base xl:text-lg font-medium"
+                >Menu</a
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-white mt-3 z-[1] p-3 shadow rounded-box w-auto"
-            >
-              <a href="#" class="text-lg font-medium md:text-white">Home</a>
-              <a href="#" class="text-lg font-medium md:text-white">About Us</a>
-              <a href="#" class="text-lg font-medium md:text-white">Shop</a>
-              <a href="#" class="text-lg font-medium md:text-white"
+              <a href="#" class="text-white md:text-base xl:text-lg font-medium"
+                >About Us</a
+              >
+              <a href="#" class="text-white md:text-base xl:text-lg font-medium"
+                >Shop</a
+              >
+              <a href="#" class="text-white md:text-base xl:text-lg font-medium"
                 >All Fruits</a
               >
-            </ul>
+            </div>
+          </div>
+          <!-- Logo and Title -->
+          <div
+            class=" w-full sm:flex justify-start order-1 md:order-none md:justify-start items-center"
+          >
+            <div class="flex sm:flex items-center">
+              <img class="h-12 w-12 mr-2" src="./images/logo.png" alt="Logo" />
+              <span class="text-white text-4xl font-bold">Fruit Burst</span>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class=" hidden sm:order-2 sm:flex relative items-center ml-auto">
+            <input
+              type="text"
+              placeholder="Search Here"
+              class="p-2 bg-white text-[#121212] borde px-3 rounded-3xl"
+            />
+            <button class="ml-2 absolute right-3 top-2 text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51029 2.99927 6.60256 3.78947 5.19599 5.19605C3.78941 6.60262 2.99921 8.51035 2.99921 10.4995C2.99921 12.4887 3.78941 14.3965 5.19599 15.803C6.60256 17.2096 8.51029 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </nav>
     </header>
+
     <main>
       <!-- carousel/slider section Exotic tastes section-->
-      <section class="sm:pt-28">
+      <section class="sm:pt-14 z-5">
         <div class="carousel w-full">
           <div
             id="slide1"
